@@ -91,4 +91,23 @@ public class MarkdownParseTest {
         assertEquals(MarkdownParse.getLinks(content), list);
 
     }
+    @Test
+    public void newtestCorrectLinks() throws IOException {
+        Path fileName = Path.of("new-test.md");
+        String content = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(content), MarkdownParse.getLinks(content));
+    }
+
+     @Test
+    public void test2CorrectLinks() throws IOException {
+        Path fileName = Path.of("test3.md");
+        String content = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(content), MarkdownParse.getLinks(content));
+    }
+     @Test
+    public void test3CorrectLinks() throws IOException {
+        Path fileName = Path.of("test3.md");
+        String content = Files.readString(fileName);
+        assertEquals(MarkdownParse.getLinks(content), MarkdownParse.getLinks(content));
+    }
 }
